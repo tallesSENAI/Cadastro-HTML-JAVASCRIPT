@@ -1,0 +1,33 @@
+<html>
+<head>
+
+    <title>Cadastro Usuário</title>
+
+</head>
+<body>
+    
+    <form>
+        <input type="text" placeholder="Nome completo" id="nomeCompletoCadastro"/> <!--PLACEHOLDER: nome que aparece enquanto o usuário 
+                                                        não digita nada no campo de texto-->
+        <br>
+        <input type="date" placeholder="Data de nascimento" id="dataNascimentoCadastro"/> <!--placeholder não aparece pois a tag "date" ja possui um placeholder pré-definido-->
+        <br>
+
+        <input type="email" placeholder="Email" id="emailCadastro"/>
+        <br>
+
+        <input type="password" placeholder="Senha" id="senhaCadastro"/>
+        <br>
+
+    </form>
+
+    <!--BUTTON esta fora da tag FORM para ele não dar um refresh na tela-->
+    <button onclick="cadastrarUsuario()">Cadastrar</button>
+    <!-- "onclick" é uma função, esta função ao ser ativada ira executar a função que esta dentro do "cadastro.JS" -->
+
+    <div id="tabelaCadastro"></div>
+
+    <script src="cadastroJS.js"></script><!--IMPORTAR OS ARQUIVOS JAVASCRIPT SEMPRE NO FINAL DO BODY-->
+
+</body>
+</html>
