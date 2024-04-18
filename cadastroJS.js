@@ -12,12 +12,11 @@ function cadastrarUsuario(){
     console.log(senhaInput.value); 
     console.log(tabelaCadastroDiv); /* "value" não é usado quando se há uma classe DIV, ele é usado apenas para INPUT, TEXTAREA e SELECT */
 
-    const paragrafo = document.createElement('p'); /*"document.createElement" é usado para crar um elemento (neste caso esta criando um parágrafo)*/
-    paragrafo.innerText = "<strong>Sucesso InnerText </strong>"; /* "innertext" ira adicionar um texto ao elemento, independente se ele for um <p>, um <span> ou outros*/
-    paragrafo.innerHTML = "<strong>Sucesso InnerHTML</strong>"; /* "innerHTML" aceita as tags HTMLs e às aplica no texto */
-    console.log(paragrafo); 
-
-    tabelaCadastroDiv.append(paragrafo); /* "append" adiciona o conteúdo na tela */
+    tabelaCadastroDiv.innerHTML += `<span style="color: Red; background-Color: Green;">Nome: ${nomeCompletoInput.value}</span><br>`;
+    tabelaCadastroDiv.innerHTML += `<span style="color: White; background-Color: Black;">Data de Nascimento: ${dataNascimentoInput.value} </span><br>`;
+    tabelaCadastroDiv.innerHTML += `<span style="color: Yellow; background-Color: Purple;">Email: ${emailInput.value}        </span><br>`;
+    tabelaCadastroDiv.innerHTML += `<span style="color: Grey; background-Color: Blue;">Senha: ${senhaInput.value}            </span><br>`;
+    tabelaCadastroDiv.innerHTML += `<p></p>`
 
     console.log("Usuário cadastrado")
 }
